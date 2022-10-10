@@ -150,6 +150,10 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+  strong, b { 
+    font-weight: bold; 
+  }
+
   a {
     color: inherit;
     font-size: 18px;
@@ -162,21 +166,21 @@ export default createGlobalStyle`
     font-size: 72px;
     line-height: 98px;
     font-weight: bold;
-    color: ${Theme.Black};
+    color: ${Theme.colors.Black};
   }
 
   h2 {
     font-size: 42px;
     line-height: 57px;
     font-weight: bold;
-    color: ${Theme.Black};
+    color: ${Theme.colors.Black};
   }
 
   p {
     font-size: 24px;
     line-height: 32px;
     font-weight: 300;
-    color: ${Theme.Black};
+    color: ${Theme.colors.Black};
   }
 `
 
