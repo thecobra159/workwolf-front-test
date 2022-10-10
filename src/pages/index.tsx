@@ -1,15 +1,29 @@
 import SEO from '@/components/SEO/SEO'
-import { Boilerplate } from '@/components/Boilerplate/Boilerplate'
+import { HomeWrapper } from '@/styles/pages/Home'
+import SignUpModal from '@/components/SignUpModal/SignUpModal'
+import { IPageProps, IStaticProps } from '@/utils/Interfaces'
+import { getPageStructure } from '@/src/Services/Structure'
 
-export default function Home(): JSX.Element {
+export async function getStaticProps(): Promise<IStaticProps> {
+  const structure = await getPageStructure()
+
+  return {
+    props: { structure },
+    revalidate: 60 * 60, // revalidate data in 1 hour
+  }
+}
+
+export default function Home({ structure }: IPageProps): JSX.Element {
   return (
     <>
-      <SEO
-        title="Next.js boilerplate"
-        description="Next.js boilerplate with Styled Components"
-      />
+      <SEO title="Workwolf Sign Up" description="Workwolf sign up test page" />
 
-      <Boilerplate />
+      <HomeWrapper>
+        <SignUpModal
+          jobTitle={structure.jobTitle}
+          description={structure.description}
+        />
+      </HomeWrapper>
     </>
   )
 }
