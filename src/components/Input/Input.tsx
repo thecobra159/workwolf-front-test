@@ -15,6 +15,7 @@ type InputProps = JSX.IntrinsicElements['input'] & IProps
 
 export function Input({
   name,
+  id,
   isDisabled,
   label,
   onBlur,
@@ -42,7 +43,7 @@ export function Input({
     <InputContainer>
       {label && (
         <InputLabel
-          htmlFor={name}
+          htmlFor={id}
           isFilled={isFilled}
           isFocused={isFocused}
           isDisabled={isDisabled}
@@ -52,6 +53,7 @@ export function Input({
       )}
       <InputWrapper isFocused={!!isFocused}>
         <input
+          id={id}
           name={name}
           autoComplete="nope"
           onBlur={handleBlur}
