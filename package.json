@@ -1,6 +1,6 @@
 {
-  "name": "ts-styled-next",
-  "description": "Next.js Boilerplate with typescript and styled components",
+  "name": "workwolf-front-test",
+  "description": "Workwolf Front-End Test",
   "version": "1.0.0",
   "private": true,
   "author": "Hans Schedel (@thecobra159)",
@@ -27,7 +27,10 @@
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "^5.3.1"
+    "react-dropzone": "14.2.2",
+    "react-lazy-load-image-component": "1.5.5",
+    "styled-components": "^5.3.1",
+    "yup": "0.32.11"
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
