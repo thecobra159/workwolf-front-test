@@ -19,8 +19,8 @@ export default function SEO({ title, description }: ISeo): JSX.Element {
       <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
       <meta name="MobileOptimized" content="320" />
       <meta name="HandheldFriendly" content="True" />
-      <meta name="theme-color" content={Theme.Black} />
-      <meta name="msapplication-TileColor" content={Theme.White} />
+      <meta name="theme-color" content={Theme.colors.Black} />
+      <meta name="msapplication-TileColor" content={Theme.colors.White} />
       <meta name="referrer" content="no-referrer-when-downgrade" />
       <meta name="google" content="notranslate" />
 
